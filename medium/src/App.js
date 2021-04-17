@@ -1,6 +1,16 @@
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Trending from "./components/Trending";
+import MorePosts from "./components/MorePosts";
+
 function App() {
   return (
-<h1>alper</h1>
+    <div className="app-wrapper">
+      <Navbar />
+      <Hero />
+      <Trending />
+      <MorePosts />
+    </div>
   );
 }
 

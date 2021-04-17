@@ -1,13 +1,246 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  margin: auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app-wrapper {
+  position: relative;
+}
+
+.section-navbar {
+  background-color: #fec017;
+  border-bottom: solid 1px black;
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+
+.section-navbar-white {
+  background-color: white;
+  border-bottom: solid 1px black;
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+
+.section-hero {
+  background-color: #fec017;
+  border-bottom: solid 1px black;
+  display: flex;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  width: 65%;
+  margin: 20px auto;
+}
+
+.logo-container {
+  width: 164px;
+  height: 25px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation a {
+  margin-left: 25px;
+  font-weight: 100;
+  font-size: medium;
+  text-decoration: none;
+  color: black;
+  letter-spacing: -0.5px;
+}
+
+.btn {
+  color: white !important;
+  background-color: black;
+  padding: 9px 15px;
+  border-radius: 30px;
+}
+
+.btn-green {
+  color: white !important;
+  background-color: green;
+  padding: 9px 15px;
+  border-radius: 30px;
+}
+
+.btn-white {
+  color: black !important;
+  background-color: transparent;
+  padding: 9px 15px;
+  border-radius: 30px;
+  border-width: 1px;
+  font-size: 17px;
+  margin-top: 5px;
+}
+
+.hero-area {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 65%;
+  margin: auto;
+  padding-bottom: 55px;
+}
+
+.text-area {
+  display: flex;
+  width: 50%;
+}
+
+.text-area h2 {
+  font-size: 4em;
+  font-weight: 400;
+  line-height: 65px;
+}
+
+.text-area p {
+  font-size: 1.1em;
+  line-height: 1.3em;
+}
+
+.text-area a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.trending-container {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+}
+
+.trending-wrapper {
+  width: 65%;
+  margin: 35px auto;
+}
+
+.trending-text-and-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: small;
+}
+
+.short-post {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 20fr;
+  gap: 20px;
+}
+.short-post h4 {
+  font-size: xx-large;
+  color: #e6e6e6;
+  margin-top: 12px;
+}
+
+.short-post-title-and-avatar {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: large;
+  margin-top: -10px;
+}
+
+.short-post-title {
+  font-weight: bold;
+  margin-top: -10px;
+}
+
+.short-post-date {
+  font-size: small;
+  color: #757575;
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.more-posts-container {
+  display: grid;
+  width: 65%;
+  margin: 45px auto;
+  grid-template-columns: 2fr 1fr;
+  gap: 10%;
+}
+
+.post-title-and-svg {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.post-title-and-svg img {
+  border-radius: 5px;
+}
+
+.post-metadata {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  font-size: small;
+}
+
+.post {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.post-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.post-content h5 {
+  font-size: 22px;
+  letter-spacing: 0px;
+  margin: 0;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.tag-btn {
+  background-color: white;
+  padding: 6px 16px;
+  border: 1px solid rgba(230, 230, 230, 1);
+  border-radius: 4px;
+  color: rgba(117, 117, 117, 1);
+}
+
+.discover-more-section {
+  border-bottom: 1px solid rgba(230, 230, 230, 1);
+  align-self: flex-start;
+}
+
+.discover-more-section h6 {
+  letter-spacing: 2px;
+}
+
+.discover-more-section p {
+  color: rgba(26, 137, 23, 1);
+  font-size: 14px;
 }
