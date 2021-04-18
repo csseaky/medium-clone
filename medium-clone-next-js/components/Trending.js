@@ -2,7 +2,7 @@ import React from "react";
 
 const Trending = () => {
   return (
-    <div class="trending-container">
+    <div className="trending-container">
       <div className="trending-wrapper">
         <div className="trending-text-and-logo">
           <svg
@@ -10,7 +10,7 @@ const Trending = () => {
             height="29"
             viewBox="0 0 28 29"
             fill="none"
-            class="ix z"
+            className="ix z"
           >
             <path fill="#fff" d="M0 .8h28v28H0z"></path>
             <g opacity="0.8" clipPath="url(#trending_svg__clip0)">
@@ -61,10 +61,10 @@ const ShortPost = () => {
           />
           <h6>Rowan Kavner in Dodger Insider</h6>
         </div>
-        <p class="short-post-title">
+        <p className="short-post-title">
           Injury Updates: Bellinger has slight hairline fracture in leg
         </p>
-        <p class="short-post-date">Apr 17 · 2 min read</p>
+        <p className="short-post-date">Apr 17 · 2 min read</p>
       </div>
     </div>
   );

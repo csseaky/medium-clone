@@ -1,9 +1,9 @@
 import React from "react";
-import useGlobalContext from "./context/useGlobalContext"
-import HeroImage from "../imgs/hero.png";
+import Image from "next/image";
+import useGlobalContext from "./context/useGlobalContext";
 
 const Hero = () => {
-  const {setIsModalShown} = useGlobalContext();
+  const { setIsModalShown } = useGlobalContext();
   return (
     <div className="section-hero">
       <div className="hero-area">
@@ -20,7 +20,7 @@ const Hero = () => {
           </div>
         </div>
         <div>
-          <img src={HeroImage} alt="" />
+          <img src="/hero.png" alt="hero" />
         </div>
       </div>
     </div>
