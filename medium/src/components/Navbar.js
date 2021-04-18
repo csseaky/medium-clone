@@ -3,11 +3,11 @@ import useGlobalContext from "../components/context/useGlobalContext";
 
 const Navbar = () => {
   const [isNavbarWhite, setIsNavbarWhite] = useState(false);
+  const {setIsModalShown} = useGlobalContext();
   const handleScroll = () => {
     if (window.scrollY > 450) {
       setIsNavbarWhite(true);
-    }
-    else{
+    } else {
       setIsNavbarWhite(false);
     }
   };
@@ -19,7 +19,7 @@ const Navbar = () => {
   });
   return (
     <header
-      className={`${isNavbarWhite?"section-navbar-white":"section-navbar"}`}
+      className={`${isNavbarWhite ? "section-navbar-white" : "section-navbar"}`}
     >
       <div className="content">
         <div className="logo-container">
@@ -32,7 +32,11 @@ const Navbar = () => {
           <a href="#">Membership</a>
           <a href="#">Write</a>
           <a href="#">Sign In</a>
-          <a href="#" className={`${isNavbarWhite?"btn-green":"btn"}`}>
+          <a
+            href="#"
+            className={`${isNavbarWhite ? "btn-green" : "btn"}`}
+            onClick={() => setIsModalShown(true)}
+          >
             Get Started
           </a>
         </nav>
