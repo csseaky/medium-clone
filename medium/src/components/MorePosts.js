@@ -6,12 +6,6 @@ const MorePosts = () => {
       <div className="posts-lists">
         <Post />
         <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
       </div>
       <div className="discover-more-section">
         <h6>DISCOVER MORE OF WHAT MATTERS TO YOU</h6>

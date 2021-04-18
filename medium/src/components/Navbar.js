@@ -1,4 +1,5 @@
-import React, { useEffect, useCallback, useState } from "react";
+import React, { useEffect, useState } from "react";
+import useGlobalContext from "../components/context/useGlobalContext";
 
 const Navbar = () => {
   const [isNavbarWhite, setIsNavbarWhite] = useState(false);

@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Trending from "./components/Trending";
 import MorePosts from "./components/MorePosts";
+import Modal from "./components/Modal";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Hero />
       <Trending />
       <MorePosts />
+      <Modal/>
     </div>
   );
 }
