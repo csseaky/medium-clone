@@ -1,25 +1,16 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect } from "react";
 import useGlobalContext from "./context/useGlobalContext";
+import GoogleLogin from "react-google-login";
 
 const Modal = () => {
   const { isModalShown, setIsModalShown } = useGlobalContext();
-  const modalContainerRef = useRef();
-  const modalRef = useRef();
-  const handleClick = e => {
-    if (isModalShown && e.target !== modalRef.current) {
-      setIsModalShown(false);
-    }
-  }
-  useEffect(() => {
-    window.addEventListener("click", handleClick);
-    return () => {
-      window.removeEventListener("click", handleClick);
-    };
-  });
+  const responseGoogle = (response) => {
+    console.log(response);
+  };
   if (isModalShown) {
     return (
-      <div className="modal-container" ref={modalContainerRef}>
-        <div className="modal" ref={modalRef}>
+      <div className="modal-container">
+        <div className="modal">
           <CloseIcon />
           <h4>Join Medium.</h4>
           <p className="modal-explanation">
@@ -28,10 +19,26 @@ const Modal = () => {
             love.
           </p>
           <div className="btn-container">
-            <div className="signup-option">
-              <GoogleIcon />
-              <p className="signup-btn">Sign up with Google</p>
-            </div>
+            <a href="#">
+              <GoogleLogin
+                clientId="985722162309-svdh6ecjfbdsjhkd4tffv7s7np9a8t37.apps.googleusercontent.com"
+                render={(renderProps) => (
+                  <div
+                    className="signup-option"
+                    onClick={renderProps.onClick}
+                    disabled={renderProps.disabled}
+                  >
+                    <GoogleIcon />
+                    <p className="signup-btn">Sign up with Google</p>
+                  </div>
+                )}
+                buttonText="Login"
+                onSuccess={responseGoogle}
+                onFailure={responseGoogle}
+                cookiePolicy={"single_host_origin"}
+              />
+            </a>
+
             <div className="signup-option">
               <FacebookIcon />
               <p className="signup-btn">Sign up with Facebook</p>

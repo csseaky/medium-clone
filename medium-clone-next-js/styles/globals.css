@@ -13,6 +13,10 @@ body {
   margin: auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 .app-wrapper {
   position: relative;
 }
@@ -290,6 +294,10 @@ body {
   gap: 5px;
 }
 
+.signup-option:hover {
+border-color: black;
+}
+
 .signup-btn {
   font-size: small;
   color: rgba(41, 41, 41, 1);
@@ -321,6 +329,7 @@ body {
 
 .toss-pp {
   color: inherit;
+  text-decoration: underline;
 }
 
 .close-icon {

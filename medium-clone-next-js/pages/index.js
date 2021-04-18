@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import Navbar from "../components/Navbar"
+import Head from "next/head";
+import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Trending from "../components/Trending";
 import MorePosts from "../components/MorePosts";
